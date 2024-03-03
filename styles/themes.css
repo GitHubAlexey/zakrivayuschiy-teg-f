@@ -4,3 +4,88 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-light {
+	--main-font: Inter-Variable;
+	--main-font-size: 18px;
+	--accent-font: PressStart2P;
+	--card-text-weight: 400;
+	--card-title-weight: 700;
+	--bg-color: #FFFFFF;
+	--accent-color: #000000;
+	--accent-color-hover: rgb(0 0 0 / 0.6);
+	--bg-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+	repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+	repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+	--container-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); 
+	--logo-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+	--title-font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+	--button-font-size: 14px;
+	--label-font-size: 14px;
+	--label-stroke-color: rgb(255 255 255 / 0.5);
+	--button-text-color: #FFFFFF;
+	--heart-contour-color: black;
+	--heart-sparks-color: #FF0000;
+	--heart-core-color: white;
+	--heart-main-body-color: #FF0000;
+	--heart-main-color: #FF0000;
+	--dialog-bg-color: rgb(0 0 0 / .75);
+	--dialog-width: clamp(21.3125rem, 20.4471rem + 3.6923vw, 22.0625rem);
+}
+
+:root.theme-dark {
+	--main-font: Inter-Variable;
+	--main-font-size: 18px;
+	--accent-font: PressStart2P;
+	--card-text-weight: 465;
+	--card-title-weight: 785;
+	--bg-color: #000000;
+	--accent-color: #00CC14;
+	--accent-color-hover: rgb(0 204 20 / 0.6);
+	--bg-image: repeating-linear-gradient(to right, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+	repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+	repeating-linear-gradient(#007f0c, #004306); 
+	--container-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); 
+	--logo-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+	--title-font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+	--button-font-size: 14px;
+	--label-font-size: 14px;
+	--label-stroke-color: rgb(0 0 0 / 0.5);
+	--button-text-color: #00CC14;
+	--heart-contour-color: #00CC14;
+	--heart-sparks-color: #FF0000;
+	--heart-core-color: white;
+	--heart-main-body-color: #FF0000;
+	--heart-main-color: #FF0000;
+	--dialog-bg-color: rgb(0 0 0 / .75);
+	--dialog-width: clamp(21.3125rem, 20.4471rem + 3.6923vw, 22.0625rem);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-font: Inter-Variable;
+		--main-font-size: 18px;
+		--accent-font: PressStart2P;
+		--card-text-weight: 465;
+		--card-title-weight: 785;
+		--bg-color: #000000;
+		--accent-color: #00CC14;
+		--accent-color-hover: rgb(0 204 20 / 0.6);
+		--bg-image: repeating-linear-gradient(to right, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+		repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+		repeating-linear-gradient(#007f0c, #004306); 
+		--container-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); 
+		--logo-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+		--title-font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+		--button-font-size: 14px;
+		--label-font-size: 14px;
+		--label-stroke-color: rgb(0 0 0 / 0.5);
+		--button-text-color: #00CC14;
+		--heart-contour-color: #00CC14;
+		--heart-sparks-color: #FF0000;
+		--heart-core-color: white;
+		--heart-main-body-color: #FF0000;
+		--heart-main-color: #FF0000;
+		--dialog-bg-color: rgb(0 0 0 / .75);
+		--dialog-width: clamp(21.3125rem, 20.4471rem + 3.6923vw, 22.0625rem);
+	}
+}

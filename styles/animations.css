@@ -12,3 +12,103 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/*---Анимация стелочки у меню---*/
+.theme-menu__button:disabled::before {
+	animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 4px;
+  }
+}
+
+/*---Анимация иконки Like---*/
+.core {
+	fill: transparent;
+	transition: fill 0.3s 0.03s linear;
+}
+
+.card__icon-button:hover .core {
+	fill: var(--accent-color);
+	transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .core {
+	fill: var(--heart-main-color);
+	transition: fill 0.3s linear;
+}
+
+.main-body {
+	fill: transparent;
+	transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .main-body {
+	fill: var(--accent-color);
+	transition: fill 0.3s 0.05s linear;
+}
+
+.card__icon-button:active .main-body {
+	fill: var(--heart-main-color);
+	transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .core, .like-icon.is-liked .main-body {
+	fill: var(--heart-main-color);
+}
+
+.like-icon.is-liked .contour {
+	fill: var(--heart-main-color);
+	transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .contour {
+	transition: fill 0.1s linear;
+}
+
+.card__icon-button:active .like-icon.is-liked .contour {
+	fill: var(--accent-color);
+}
+
+.like-icon.is-liked .heart {
+	animation: scale-heart 0.3s 0.1s alternate ease-in;
+	transform-origin: center;
+}
+
+.sparks {
+	opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+	animation: sparks 0.3s 0.3s alternate ease-in;
+	transform-origin: center;
+}
+
+@keyframes scale-heart {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 1.5;
+	}
+	100% {
+		scale: 1
+	}
+}
+
+@keyframes sparks {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
