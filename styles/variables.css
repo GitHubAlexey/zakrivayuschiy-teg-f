@@ -21,6 +21,9 @@
 	--heart-core-color: white;
 	--heart-main-body-color: #FF0000;
 	--heart-main-color: #FF0000;
-	--dialog-bg-color: rgb(0 0 0 / .75);
 	--dialog-width: clamp(21.3125rem, 20.4471rem + 3.6923vw, 22.0625rem);
+}
+
+::backdrop {
+  --dialog-bg-color: rgb(0 0 0 / .75);
 }

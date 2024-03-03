@@ -16,7 +16,7 @@
 
 .page {
 	color: var(--accent-color);
-	font-family: var(--main-font, Arial, sans-serif);
+	font-family: var(--main-font, Arial), sans-serif;
 	font-size: var(--main-font-size);
 	background-color: var(--bg-color);
 	background-image: var(--bg-image);
@@ -24,6 +24,12 @@
 	min-inline-size: 320px;
 	min-block-size: 100dvb;
 	font-variation-settings: "wght" var(--card-text-weight);
+	background-attachment: fixed
+}
+
+.container {
+	max-width: var(--container-width);
+	margin: 0 auto;
 }
 
 /*-------------------------HEADER-----------------------*/
@@ -31,17 +37,14 @@
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
-	border: 2px solid #000;
+	border: 2px solid var(--accent-color);
 	padding: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem) 0 25px 0;
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), sans-serif;
 	font-weight: var(--card-text-weight);
 	line-height: 1;
 	background-color: inherit;
-}
-
-.header__container {
-	max-width: var(--container-width);
-	margin: 100px auto;
+	margin-block-start: 100px;
+	margin-block-end: 100px;
 }
 
 .header__name {
@@ -120,18 +123,10 @@
 }
 
 /*------------------------------MAIN-----------------------------------*/
-.main {
-	background-color: inherit;
-}
-
-.main__container {
-	max-width: var(--container-width);
-	margin: 0 auto;
-}
-
 .card {
 	margin-block-end: 50px;
 	border: 2px solid var(--accent-color);
+	background-color: var(--bg-color);
 }
 
 .card__title {
@@ -154,7 +149,7 @@
 	right: clamp(0.8125rem, -0.0529rem + 3.6923vw, 1.5625rem);
 	z-index: 1;
 	color: currentColor;
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), sans-serif;
 	font-size: var(--label-font-size);
 	line-height: 1;
 	text-shadow: 1px 1px var(--label-stroke-color);
@@ -191,8 +186,16 @@
 
 .card__icon-button {
 	height: 38px;
-	outline: 2px solid transparent;
+	border: 2px solid transparent;
 	transition: 0.3s ease;
+}
+
+.card__icon-button:focus {
+	outline: none;
+}
+
+.card__icon-button:focus-visible {
+	border: 2px solid var(--accent-color);
 }
 
 .button {
@@ -201,7 +204,7 @@
 	border: 2px solid var(--accent-color);
 
 	overflow: hidden;
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), sans-serif;
 	font-size: var(--button-font-size);
 	line-height: 0.9;
 	text-align: center;
@@ -230,14 +233,6 @@
 	box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
-.card__icon-button:focus {
-	outline: none;
-}
-
-.card__icon-button:focus-visible {
-	border: 2px solid var(--accent-color);
-}
-
 .card__like-button {
 	min-width: 130px;
 	min-height: 38px;
@@ -254,11 +249,6 @@
 .footer {
 	display: flex;
 	justify-content: center;
-}
-
-.footer__container {
-	max-width: var(--container-width);
-	margin: 0 auto;
 }
 
 .footer__button {
@@ -303,7 +293,7 @@
 
 .dialog__text {
 	color: var(--accent-color);
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), sans-serif;
 	font-size: var(--button-font-size);
 	line-height: 1.5;
 	text-transform: uppercase;
