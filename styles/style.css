@@ -62,6 +62,7 @@
 .header__title {
 	font-size: var(--title-font-size);
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .header__theme-menu {
@@ -325,6 +326,12 @@
 
 	.dialog:is([open]) {
 		padding: 30px 42px;
+	}
+}
+
+@media (width < 375px) {
+	:root {
+		--logo-font-size: 45px;
 	}
 }
 
